@@ -1,0 +1,14 @@
+from collections import Counter
+from itertools import permutations
+myString = input()
+alpha = [x for x in myString.lower() if x.isalpha()]
+counts = Counter(alpha)
+number_of_odd = sum(1 for letter, cnt in counts.items() if cnt % 2)
+if number_of_odd == 1 or 0:
+
+    perms = [''.join(p) for p in permutations(alpha)]
+    print(True,('permutaions:',perms))
+
+else:
+    print(False)
+
